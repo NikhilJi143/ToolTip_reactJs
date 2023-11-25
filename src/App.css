@@ -1,0 +1,181 @@
+:root {
+  --color: #192E5B; /* Define a root variable for color */
+}
+
+/* Container styling */
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2rem;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* User input section styling */
+.userInputs {
+  padding: 1rem;
+  width: 50%;
+  height: 130px;
+  border-radius: 1rem;
+  background-image: linear-gradient(to right, rgb(17, 0, 255) , rgb(47, 0, 255));
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.inputContainers {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+p {
+  text-align: center;
+  font-size: 1.5rem;
+  color: var(--color);
+  border: 5px solid white;
+  background-color: rgb(127, 169, 219);
+  border-radius: 20px;
+  padding: 5px;
+}
+
+.inputContainers button {
+  cursor: pointer;
+  padding: 8px 20px;
+  border-radius: 20px;
+  box-shadow: 0px 0px 10px 5px white;
+}
+
+.inputContainers button:hover {
+  background-color: rgb(67, 200, 253);
+}
+
+/* Tooltip container styling */
+.hoverContainer {
+  height: 400px;
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  margin-top: 2rem;
+}
+
+.hoverBtn button {
+  height: 3rem;
+  width: 20rem;
+  font-weight: 900;
+  background-color: wheat;
+  font-size: 1.5rem;
+  color: var(--color);
+  border-radius: 50px;
+  cursor: pointer;
+  box-shadow: 0px 0px 20px 5px rgb(230, 230, 200);
+}
+
+.hoverBtn button:hover {
+  font-size: 20px;
+  color: #115cff;
+}
+
+/* Tooltip styling */
+.tip {
+  width: 250px;
+  position: absolute;
+  color: black;
+  display: none;
+  background-color: #a8c3ff;
+  padding: .5rem 1rem;
+  font-size: 1.2rem;
+  border-radius: 50px;
+  overflow-wrap: break-word;
+  letter-spacing: .5px;
+  text-align: center;
+}
+
+/* Show tooltip on hover */
+.hoverBtn:hover + .tip {
+  display: block;
+}
+
+/* setting css for the tip */
+.left,.top,.bottom,.right{
+  position:absolute;
+  border-radius: 8px;
+  text-align: center;
+  background-color: coral;
+  padding: 10px;
+}
+/* when the left side is selected to show the tip */
+.left{
+  right: 90%;
+  top:42.5%;
+}
+/* when the top side is selected  to show the tip */
+.top{
+  left:31%;
+  top: 40px;
+}
+/* when the bottom side is selected  to show the tip */
+.bottom{
+  left:30%;
+  top:70%;
+}
+/* when the right side is selected  to show the tip */
+.right{
+  left:85%;
+  top:42%;
+}
+
+/* arrow icon to display in bottom */
+.bottom::after {
+  content: "";
+  position: absolute;
+  bottom: 100%;
+  left: 70%;
+  margin-left: -10px;
+  border-width: 15px;
+  border-style: solid;
+  border-color: transparent transparent coral transparent;
+}
+/* arrow icon to display in top */
+.top::after {
+  content: " ";
+  position: absolute;
+  top: 100%; 
+  left: 20%;
+  margin-left: -15px;
+  border-width: 15px;
+  border-style: solid;
+  border-color: coral transparent transparent transparent;
+}
+/* arrow icon to display in right */
+.right::after {
+  content: " ";
+  position: absolute;
+  top: 40%;
+  right: 100%; 
+  margin-top: -12px;
+  border-width: 12px;
+  border-style: solid;
+  border-color: transparent coral transparent transparent;
+}
+/* arrow icon to display in left */
+.left::after {
+  content: " ";
+  position: absolute;
+  top: 60%;
+  left: 100%; 
+  margin-top: -12px;
+  border-width: 12px;
+  border-style: solid;
+  border-color: transparent transparent transparent coral;
+}
+
+/* Active button styling */
+.active {
+  background-color: red;
+  color: white;
+}
+
